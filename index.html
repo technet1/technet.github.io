@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="assets/css/slideshow.css" />
 		<link rel="stylesheet" href="assets/css/firework.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/image.css">
 
 	</head>
 	<body class="is-preload">
@@ -84,39 +85,68 @@
 									
 								</header>
 
-<!--slideshow-->								
-					
-<div id="slideshow">
-        <div class="slide-wrapper">
-             
-        <!-- Define each of the slides
-         and write the content -->
-          
-            <div class="slide">
-                <h1 class="slide-number">
-                	<a href="#" class="image fit"><img src="images/d.png" alt="" /></a>
-                    A wallpaper
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                	<a href="#" class="image fit"><img src="images/c.jpg" alt="" /></a>
-                    slide
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                	<a href="#" class="image fit"><img src="images/b.png" alt="" /></a>
-                    This is an example of
-                </h1>
-            </div>
-            <div class="slide">
-                <h1 class="slide-number">
-                	<a href="#" class="image fit"><img src="images/a.jpg" alt="" /></a>
-                    Slideshow with HTML and CSS only
-                </h1>
-            </div>
-        </div>
+<!-- new image slider -->
+<!-- image slider start -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="slider">
+	<div class="slides">
+	   <!-- radio button start  -->
+	   <input type="radio" name="radio-btn" id="radio1">
+	   <input type="radio" name="radio-btn" id="radio2">
+	   <input type="radio" name="radio-btn" id="radio3">
+	   <input type="radio" name="radio-btn" id="radio4"> 
+	   <!-- radio button end -->
+	   <!-- image slide start -->
+	   <div class="slide first">
+		   <img src="images/1.png" alt="">
+	   </div>
+	   <div class="slide">
+		   <img src="images/2.jpg" alt="">
+	   </div>
+	   <div class="slide">
+		<img src="images/3.jpg" alt="">
+	</div>
+	<div class="slide">
+		<img src="images/4.png" alt="">
+	</div>
+	   <!-- image slide end -->
+	   <!-- automatic navigation start -->
+	   <div class="navigation-auto">
+		   <div class="auto-btn1"></div>
+		   <div class="auto-btn2"></div>
+		   <div class="auto-btn3"></div>
+		   <div class="auto-btn4"></div>
+
+	   </div>
+
+	
+	   <!-- automatic navigation end -->
+
+	   
+	</div>
+	<!-- manual nagivation start -->
+	<div class="navigation-manual">
+		<label for="radio1" class="manual-btn"></label>
+		<label for="radio2" class="manual-btn"></label>
+		<label for="radio3" class="manual-btn"></label>
+		<label for="radio4" class="manual-btn"></label>
+	</div>
+	<!-- manual navigation end -->
+</div>
+
+<!-- image slider end -->
+
+<script type="text/javascript">
+	var counter = 1;
+	setInterval(function(){
+	   document.getElementById('radio'+ counter).checked = true;
+	   counter++;
+	   if(counter > 4){
+		   counter = 1;
+	   }
+	},2000);
+</script>
+	<h3>click the dots to change image</h3>
 
 								</ul>
 							</article>
